@@ -60,7 +60,6 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "st", NULL };
 
 #include "shiftview.c"
-#define FLAMESHOT "flameshot gui"
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
@@ -88,7 +87,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
     { MODKEY,                       XK_n,      shiftview,      {.i = +1 } }, // Shift view to left
     { MODKEY,                       XK_b,      shiftview,      {.i = -1 } }, // Shift view to right
-    { MODKEY|ShiftMask,             XK_s,      SHCMD(FLAMESHOT) },
+    { MODKEY|ShiftMask,             XK_s,      spawn,          SHCMD("flameshot gui") },
     TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
