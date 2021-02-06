@@ -88,6 +88,8 @@ static Key keys[] = {
     { MODKEY,                       XK_n,      shiftview,      {.i = +1 } }, // Shift view to left
     { MODKEY,                       XK_b,      shiftview,      {.i = -1 } }, // Shift view to right
     { MODKEY|ShiftMask,             XK_s,      spawn,          SHCMD("flameshot gui") },
+    { MODKEY|ShiftMask,             XK_a,      spawn,          SHCMD("lutris") },
+    { MODKEY|ShiftMask,             XK_d,      spawn,          SHCMD("tabbed -c surf -pe") },
     TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
